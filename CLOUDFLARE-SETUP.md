@@ -18,7 +18,7 @@ CLOUDFLARE_ACCOUNT_ID=你的Cloudflare_Account_ID
 
 `.env.cloudflare` 已被 Git 忽略，不会提交到 GitHub。不要把真实 Token 写入 `wrangler.toml`、源代码或聊天内容。
 
-当前 `wrangler.toml` 中的 `YOUR_CLOUDFLARE_ACCOUNT_ID` 只是占位符。部署前可以直接替换为 Account ID，也可以优先通过环境变量提供 Account ID。
+`wrangler.toml` 不固定写入 Account ID。通过 Cloudflare Workers GitHub 集成部署时，使用当前 Cloudflare 账号授权的 Account ID，避免把账号信息写入仓库。
 
 ## 2. 配置 Remove.bg Secret
 
