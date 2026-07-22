@@ -1,0 +1,6 @@
+name = "image-background-remover"
+compatibility_date = "2026-07-23"
+account_id = "YOUR_CLOUDFLARE_ACCOUNT_ID"
+
+# Keep the Remove.bg key out of this file. Configure it in Cloudflare:
+# npx wrangler secret put REMOVE_BG_API_KEY
