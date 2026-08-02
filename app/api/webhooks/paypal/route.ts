@@ -5,6 +5,8 @@ import { getDb } from '../../../../lib/db';
 const PLANS: Record<string, { plan: 'plus' | 'pro'; credits: number }> = {
   'P-0YH07638923768646NJXMIRI': { plan: 'plus', credits: 30 },
   'P-90S28937F64255111NJXMIRI': { plan: 'pro', credits: 150 },
+  'P-4M024721LM4844357NJXM5OY': { plan: 'plus', credits: 30 },
+  'P-3J765497S0062135NNJXM5OY': { plan: 'pro', credits: 150 },
 };
 
 async function getToken(clientId: string, secret: string, base: string) {
