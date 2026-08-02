@@ -39,7 +39,9 @@ export async function POST(request: Request) {
   if (inserted.meta.changes === 0) return NextResponse.json({ received: true, duplicate: true });
 
   const plan = (metadata.plan || data.product?.metadata?.plan) as Plan;
-  if ((type === 'checkout.completed' || type === 'subscription.active' || type === 'subscription.paid') && PLAN_CREDITS[plan]) {
+  // checkout.completed grants the initial period; subscription.paid grants renewals.
+  // Do not grant on subscription.active as Creem may emit it alongside checkout.completed.
+  if ((type === 'checkout.completed' || type === 'subscription.paid') && PLAN_CREDITS[plan]) {
     const now = new Date().toISOString();
     const subscriptionId = String(data.subscription?.id || data.subscription_id || data.id || eventId);
     const customerId = String(data.customer?.id || data.customer_id || '');
