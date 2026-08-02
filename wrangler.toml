@@ -7,5 +7,11 @@ compatibility_flags = ["nodejs_compat", "global_fetch_strictly_public"]
 directory = ".open-next/assets"
 binding = "ASSETS"
 
+[[d1_databases]]
+binding = "DB"
+database_name = "image-background-remover-db"
+database_id = "3686c5df-d25d-404c-b0a3-bcd17236dd96"
+migrations_dir = "migrations"
+
 # Keep the Remove.bg key out of this file. Configure it in Cloudflare:
 # npx wrangler secret put REMOVE_BG_API_KEY

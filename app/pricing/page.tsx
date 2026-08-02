@@ -19,7 +19,7 @@ const plans = [
     period: '/mo',
     allowance: '30 successful removals/month',
     cta: 'Choose Plus',
-    href: '#contact',
+    href: '/api/checkout?plan=plus',
     featured: true,
     features: ['Everything in Free', 'No watermark on exports', 'Transparent PNG downloads', 'Best value for light product photo work'],
   },
@@ -30,7 +30,7 @@ const plans = [
     period: '/mo',
     allowance: '150 successful removals/month',
     cta: 'Choose Pro',
-    href: '#contact',
+    href: '/api/checkout?plan=pro',
     features: ['Everything in Plus', 'Higher monthly processing allowance', 'Priority support', 'Built for repeated catalog edits'],
   },
 ];
@@ -74,7 +74,7 @@ export default function PricingPage() {
           ))}
         </div>
 
-        <p id="contact" className="mx-auto mt-10 max-w-3xl text-center text-sm leading-6 text-slate-500">Plans are billed monthly. Your allowance counts successful background removals only. Payment checkout will be connected here before paid plans are activated.</p>
+        <p id="contact" className="mx-auto mt-10 max-w-3xl text-center text-sm leading-6 text-slate-500">Plans are billed monthly. Your allowance counts successful background removals only. Sign in with Google to subscribe securely.</p>
       </section>
     </main>
   );
