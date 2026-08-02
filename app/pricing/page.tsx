@@ -66,6 +66,7 @@ export default function PricingPage() {
               <p className="mt-8 text-lg font-bold text-teal-500">{plan.allowance}</p>
               <div className="mt-3 flex items-baseline gap-2"><span className="text-6xl font-black tracking-tight">{plan.price}</span><span className="text-lg text-slate-500">{plan.period}</span></div>
               <Link href={plan.href} className={`mt-8 rounded-xl px-5 py-4 text-center font-black transition ${plan.featured ? 'bg-teal-500 text-white hover:bg-teal-600' : 'border border-slate-300 text-slate-950 hover:border-indigo-400 hover:text-indigo-700'}`}>{plan.cta} <span aria-hidden="true">→</span></Link>
+              {plan.name !== 'Free' && <Link href={`/api/paypal/checkout?plan=${plan.name.toLowerCase()}`} className="mt-3 rounded-xl border border-[#0070ba] px-5 py-3 text-center text-sm font-bold text-[#0070ba] hover:bg-blue-50">Pay with PayPal</Link>}
               <div className="my-8 border-t border-slate-200" />
               <ul className="space-y-5 text-[15px] leading-6 text-slate-700">
                 {plan.features.map((feature) => <li key={feature} className="flex gap-3"><span className="font-black text-teal-500">✓</span><span>{feature}</span></li>)}
