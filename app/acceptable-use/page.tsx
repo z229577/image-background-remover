@@ -1,0 +1,7 @@
+import Link from 'next/link';
+
+export const metadata = { title: 'Acceptable Use Policy | Image Background Remover' };
+
+export default function AcceptableUsePage() {
+  return <main className="min-h-screen bg-[#f7f8fb] text-slate-900"><nav className="mx-auto flex max-w-5xl justify-between px-6 py-6"><Link href="/" className="text-xl font-black">cutout<span className="text-indigo-600">.ai</span></Link><Link href="/" className="text-sm text-slate-600">Back to home</Link></nav><article className="mx-auto max-w-3xl rounded-3xl bg-white px-8 py-12 shadow-sm"><h1 className="text-4xl font-black">Acceptable Use Policy</h1><p className="mt-3 text-sm text-slate-500">Last updated: August 5, 2026</p><div className="prose prose-slate mt-8 max-w-none"><p>Image Background Remover is an image background processing tool. Users may upload only lawful images they own or are authorized to process.</p><h2>Prohibited content</h2><p>NSFW, adult, pornographic, sexually explicit, or sexual exploitation content is strictly prohibited. This includes sexual content involving minors, non-consensual intimate imagery, sexual deepfakes, and content intended to facilitate abuse or harassment.</p><p>Illegal, hateful, threatening, infringing, deceptive, or abusive content is also prohibited. We may block processing, suspend accounts, and cooperate with lawful requests when necessary.</p><h2>Report a concern</h2><p>Report suspected abuse or policy violations to <a href="mailto:support@videomaker.tools">support@videomaker.tools</a>.</p></div></article></main>;
+}
